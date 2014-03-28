@@ -1,0 +1,8 @@
+[user]
+	name = Jim Crist
+	email = crist042@umn.edu
+
+[core]
+    pager = less
+    editor = vim
+    excludesfile = ~/.gitignore
