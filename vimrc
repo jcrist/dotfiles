@@ -13,6 +13,7 @@ call vundle#rc(vundlepath)
 "List of plugins vundle should manage
 Plugin 'gmarik/vundle'
 Plugin 'sjl/badwolf'
+Plugin 'JuliaLang/julia-vim'
 
 " Turn back on after vundle initialized
 filetype plugin indent on
@@ -57,12 +58,15 @@ inoremap kj <esc>
 " ## THEME/COLORS
 set t_Co=256  " enable 256-color mode.
 syntax enable " enable syntax highlighting (previously syntax on).
+set background=dark
+colorscheme badwolf
+if has('gui_running')
+    set guifont=Inconsolata\ Medium\ 12
+endif
 
 " Highlight characters that go over 80 columns
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-set background=dark
-colorscheme badwolf
 
 " ## VIM UI
 set number " show line numbers
