@@ -14,6 +14,8 @@ call vundle#rc(vundlepath)
 Plugin 'gmarik/vundle'
 Plugin 'sjl/badwolf'
 Plugin 'JuliaLang/julia-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'nvie/vim-flake8'
 
 " Turn back on after vundle initialized
 filetype plugin indent on
@@ -73,7 +75,6 @@ set number " show line numbers
 set laststatus=2 " last window always has a statusline
 set nohlsearch " Don't continue to highlight searched phrases.
 set incsearch " But do highlight as you type your search.
-set ignorecase " Make searches case-insensitive.
 set ruler " Always show info along bottom.
 set showmatch
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)
@@ -87,3 +88,9 @@ set shiftwidth=4
 set shiftround
 set expandtab
 set nowrap
+
+" ## MISC
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:flake8_ignore="E128"
+
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>

@@ -9,4 +9,5 @@ alias ls='ls --color=auto'
 alias tmux='tmux -2'
 #PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
 PS1='\[\e[1;32m\]\u\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \[\e[1;32m\]\$\[\e[0m\] '
-
+alias matlab='matlab -c /usr/local/MATLAB/R2014a/licenses/license_arch_341601_R2014a.lic'
+alias t='python2 ~/Code/todo/t.py --task-dir ~/tasks --list tasks'
